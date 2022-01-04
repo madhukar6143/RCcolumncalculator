@@ -1,52 +1,51 @@
-<p class="h3 text-center">Online RC-Column Estimation Calculator</p>
-
-<div class="row">
-    <div class="col-12 col-md-6">
-        
+<div class="h3 text-center border border-success border-5 bg-primary  p-2 mb-0">Online RC-Column Estimation Calculator</div>
+<div class="row backgr border border-5 border-warning m-2">
+  <div class="col-12 col-md-6">
+      
 <div class="container ">
-    <form class="p-4 border border-primary " (ngSubmit)=rcColumnCalculator()>
-        <div class="mb-3">
-            <label for="Load" class="form-label">Load</label>
-            <input type="text" name="Load" class="form-control" id="brand"  [(ngModel)]=Load>
-          </div>
-        <div class="mb-3">
-          <label for="concreatestrength" class="form-label">Concreate Strength</label>
-          <input type="text" name="concreatestrength" class="form-control" id="concreatestrength" [(ngModel)]= concreatestrength >
+  <form class="p-4 border border-primary abcdef mt-2" (ngSubmit)=rcColumnCalculator()>
+      <div class="mb-3">
+          <label for="Load" class="form-label">Load (in Kilo Netwon)</label>
+          <input type="text" name="Load" class="form-control" id="brand"  [(ngModel)]=Load>
         </div>
+      <div class="mb-3">
+        <label for="concreatestrength" class="form-label">Concreate Strength (in N/mm^2)</label>
+        <input type="text" name="concreatestrength" class="form-control" id="concreatestrength" [(ngModel)]= concreatestrength >
+      </div>
+      <div class="mb-3">
+          <label for="gradeofsteel" class="form-label">Grade of Steel (in N/mm^2) </label>
+          <input type="text" name="gradeofsteel" class="form-control" id="gradeofsteel"  [(ngModel)]=gradeofsteel>
+        </div>
+  
         <div class="mb-3">
-            <label for="gradeofsteel" class="form-label">Grade of Steel</label>
-            <input type="text" name="gradeofsteel" class="form-control" id="gradeofsteel"  [(ngModel)]=gradeofsteel>
-          </div>
-    
-          <div class="mb-3">
-            <label for="percentageofsteel" class="form-label">Percentage of Steel</label>
-            <input type="text" name="percentageofsteel" class="form-control" id="percentageofsteel"  [(ngModel)]=percentageofsteel>
-          </div>
-          
-          <div class="mb-3">
-            <label for="effectivelength" class="form-label">Effective length</label>
-            <input type="text" name="effectivelength" class="form-control" id="effectivelength"  [(ngModel)]=effectivelength>
-          </div>
-        <button type="submit" class="btn btn-primary mx-auto d-block">Submit</button>
-      </form>
-    </div>
-    
-
-    </div>
-    <div class="col-12 col-md-6">
+          <label for="percentageofsteel" class="form-label">Percentage of Steel</label>
+          <input type="text" name="percentageofsteel" class="form-control" id="percentageofsteel"  [(ngModel)]=percentageofsteel>
+        </div>
         
-<div class="container">
-    <div class="border border-success " >
-   <div><span >              Grossarea :</span><span> {{this.grossarea}} </span></div> 
-    <div><span>Gross Area of Concreate :</span>  <span>{{this.grossareaofconcreate}}</span></div> 
-    
-    <div><span>Gross Area of Steel :</span>  <span>{{this.grossareaofsteel}}</span></div> 
-    
-    <div><span>Size of Column :</span>  <span>{{this.sizeofcolumn}}</span></div> 
-    
-    <div><span> Number of Bars :</span>  <span>{{this.numberofbars}}</span></div> 
-</div>      
+        <div class="mb-3">
+          <label for="effectivelength" class="form-label">Effective length (in meters)</label>
+          <input type="text" name="effectivelength" class="form-control" id="effectivelength"  [(ngModel)]=effectivelength>
+        </div>
+      <button type="submit" class="btn btn-primary mx-auto d-block">Submit</button>
+    </form>
   </div>
-    </div>
-  </div>
+  
 
+  </div>
+  <div class="col-12 col-md-6">
+      
+<div class="container">
+  <div class="border border-success abcdef p-4 mt-2" >
+ <div><span >              Grossarea :</span><span> {{this.grossarea |number:'1.2-2' }} mm^2 </span></div> <p></p>
+  <div><span>Gross Area of Concreate :</span>  <span>{{this.grossareaofconcreate|number:'1.2-2' }} mm^2</span></div>  <p></p>
+  
+  <div><span>Gross Area of Steel :</span>  <span>{{this.grossareaofsteel|number:'1.2-2' }} mm^2</span></div>  <p></p>
+  
+  <div><span>Size of Column :</span>  <span>{{this.sizeofcolumn|number:'1.2-2' }} mm</span></div>  <p></p>
+  
+  <div><span> Number of Bars :</span>  <span>{{this.numberofbars|number:'1.2-2' }}</span></div>  <p></p>
+
+  <img class="imag" src="/assets/1234.png" alt="image">
+</div>      
+</div>
+  </div>
